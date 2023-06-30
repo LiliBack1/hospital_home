@@ -1,0 +1,33 @@
+<h1>HOSPITAL HOME</h1>
+<h2>LISTADO DE MEDICOS</h2>
+<table>
+<thead>
+    <tr>
+        <th>Cedula</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Especialidad</th>
+        <th>Consultorio</th>
+        <th>Correo</th>
+        <th>opciones</th>
+    </tr>
+</thead>
+<tbody>
+    {{#each medicos}}
+    <tr>
+        <td>{{id}}</td>
+        <td>{{nombres}}</td>
+        <td>{{apellidos}}</td>
+        <td>{{especialidad}}</td>
+        <td>{{consultorio}}</td>
+        <td>{{correo}}</td>
+        <td> 
+        <br><br>
+        <a class="eliminar" href="medicos/eliminar/{{cedula}}">Eliminar</a>
+        </td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+<a class="volver" href="/">Volver</a>
+<a href="medicos/agregar-medico">Agregar medico</a>
